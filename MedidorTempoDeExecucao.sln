@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedidorTempoDeExecucao", "MedidorTempoDeExecucao\MedidorTempoDeExecucao.csproj", "{D2A7E482-0117-4DCC-A939-4F493DE2BDD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2A7E482-0117-4DCC-A939-4F493DE2BDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A7E482-0117-4DCC-A939-4F493DE2BDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A7E482-0117-4DCC-A939-4F493DE2BDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A7E482-0117-4DCC-A939-4F493DE2BDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE63122F-8840-48B4-822B-860DD6CA9A64}
+	EndGlobalSection
+EndGlobal

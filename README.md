@@ -8,9 +8,9 @@ Este pequeno projeto foi criado para servir como auxílio em testes de desempenh
 
 ## Metas de implementação
 
-~~- Permitir o usuário escolher a quantidade de vezes o programa deve ser executado para teste;~~
-~~- Medir mais de um arquivo de uma única vez;~~
-~~- Gerar gráfico da média de tempo de execução dos programas processados mediante escolha do usuário;~~
+- ~~Permitir o usuário escolher a quantidade de vezes o programa deve ser executado para teste;~~
+- ~~Medir mais de um arquivo de uma única vez;~~
+- ~~Gerar gráfico da média de tempo de execução dos programas processados mediante escolha do usuário;~~
 - Permitir o usúario atrelar títulos a cada programa escolhido para testar;
 - Permitir o usuário definir um título para o teste;
 - Gerar JPG ou PDF do gráfico com os títulos e nomes escolhidos pelo usuário; 

@@ -14,8 +14,8 @@ namespace MedidorTempoDeExecucao
             {
                 
                 chart.ChartAreas[0].AxisY.LabelStyle.Format = "0.00";
-                chart.Series["Média (milésimos)"].Points.AddXY(m.nome, m.tempo);
-                chart.Series["Média (milésimos)"].Points[count].Label = m.tempo.ToString();
+                chart.Series["Média (segundos)"].Points.AddXY(m.nome, m.tempo);
+                chart.Series["Média (segundos)"].Points[count].Label = m.tempo.ToString();
                 count++;
             }
             chart.Titles.Add("Gráfico de desempenho");

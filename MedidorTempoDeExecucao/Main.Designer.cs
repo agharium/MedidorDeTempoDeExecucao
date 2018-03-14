@@ -79,7 +79,7 @@
             this.numQtd.Size = new System.Drawing.Size(57, 20);
             this.numQtd.TabIndex = 5;
             this.numQtd.Value = new decimal(new int[] {
-            100,
+            20,
             0,
             0,
             0});

@@ -46,7 +46,7 @@
             this.chart.Name = "chart";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Média (milésimos)";
+            series1.Name = "Média (segundos)";
             this.chart.Series.Add(series1);
             this.chart.Size = new System.Drawing.Size(584, 562);
             this.chart.TabIndex = 0;

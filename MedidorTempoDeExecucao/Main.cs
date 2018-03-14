@@ -40,8 +40,8 @@ namespace MedidorTempoDeExecucao
                 startInfo.FileName = p.Text;
                 startInfo.WindowStyle = ProcessWindowStyle.Hidden;
 
-                // roda 10 vezes para acostumar o processador e normalizar o tempo de execução
-                for (int i = 0; i < 10; i++)
+                // roda 5 vezes para acostumar o processador e normalizar o tempo de execução
+                for (int i = 0; i < 5; i++)
                 {
                     Process exeProcess = Process.Start(startInfo);
                     exeProcess.WaitForExit();
@@ -62,7 +62,7 @@ namespace MedidorTempoDeExecucao
                 }
 
                 ts = TimeSpan.FromTicks(ts.Ticks / (int)numQtd.Value);
-                resultados.Add(new Media(startInfo.FileName.Split('\\').Last(), ts.TotalMilliseconds));
+                resultados.Add(new Media(startInfo.FileName.Split('\\').Last(), ts.TotalSeconds));
             }
 
             Resultado r = new Resultado(resultados);

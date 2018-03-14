@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MedidorTempoDeExecucao
@@ -20,38 +15,55 @@ namespace MedidorTempoDeExecucao
 
         private void btnOpenFile_Click(object sender, EventArgs e)
         {
-            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                txtFilePath.Text = openFileDialog.FileName;
+                var item = new ListViewItem(openFileDialog.FileName);
+                if (!listView.Items.Contains(item))
+                {
+                    listView.Items.Add(item);
+                }
             }
         }
 
-        private void btnOneHundredTimes_Click(object sender, EventArgs e)
+        private void btnIniciar_Click(object sender, EventArgs e)
         {
-            ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.CreateNoWindow = false;
-            startInfo.UseShellExecute = false;
-            startInfo.FileName = txtFilePath.Text;
-            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            List<Media> resultados = new List<Media>();
 
-            TimeSpan ts = new TimeSpan();
-            Stopwatch stopWatch = new Stopwatch();
-            for (int i = 0; i < 100; i++)
+            foreach (ListViewItem p in listView.Items)
             {
-                stopWatch.Start();
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.CreateNoWindow = false;
+                startInfo.UseShellExecute = false;
+                startInfo.FileName = p.Text;
+                startInfo.WindowStyle = ProcessWindowStyle.Hidden;
 
-                Process exeProcess = Process.Start(startInfo);
-                exeProcess.WaitForExit();
+                // roda 10 vezes para acostumar o processador e normalizar o tempo de execução
+                for (int i = 0; i < 10; i++)
+                {
+                    Process exeProcess = Process.Start(startInfo);
+                    exeProcess.WaitForExit();
+                }
 
-                stopWatch.Stop();
-                ts += stopWatch.Elapsed;
-                stopWatch.Reset();
+                TimeSpan ts = new TimeSpan();
+                Stopwatch stopWatch = new Stopwatch();
+                for (int i = 0; i < numQtd.Value; i++)
+                {
+                    stopWatch.Start();
+
+                    Process exeProcess = Process.Start(startInfo);
+                    exeProcess.WaitForExit();
+
+                    stopWatch.Stop();
+                    ts += stopWatch.Elapsed;
+                    stopWatch.Reset();
+                }
+
+                ts = TimeSpan.FromTicks(ts.Ticks / (int)numQtd.Value);
+                resultados.Add(new Media(startInfo.FileName.Split('\\').Last(), ts.TotalMilliseconds));
             }
 
-            ts = TimeSpan.FromTicks(ts.Ticks / 100);
-
-            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds);
-            MessageBox.Show(elapsedTime);
+            Resultado r = new Resultado(resultados);
+            r.Show();
         }
     }
 }

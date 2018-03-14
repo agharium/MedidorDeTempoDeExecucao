@@ -17,10 +17,13 @@ namespace MedidorTempoDeExecucao
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                var item = new ListViewItem(openFileDialog.FileName);
-                if (!listView.Items.Contains(item))
+                foreach (var file in openFileDialog.FileNames)
                 {
-                    listView.Items.Add(item);
+                    var item = new ListViewItem(file);
+                    if (!listView.Items.Contains(item))
+                    {
+                        listView.Items.Add(item);
+                    }
                 }
             }
         }

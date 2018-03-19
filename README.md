@@ -2,7 +2,7 @@
 
 Código-fonte do utilitário desenvolvido em C# para fazer média de tempo de execução de programas. 
 
-.exe disponível [aqui](https://github.com/agharium/MedidorDeTempoDeExecucao/releases/download/stable/MedidorTempoDeExecucao.exe) - **Requisito: .NET Framework 4.6**
+**Executável portátil disponível [aqui](https://github.com/agharium/MedidorDeTempoDeExecucao/releases/download/stable/MedidorTempoDeExecucao.exe) - Requisito: [.NET Framework 4.6](https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe)**
 
 Versão atual: **1.1**
 

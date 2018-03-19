@@ -2,7 +2,7 @@
 
 Código-fonte do utilitário desenvolvido em C# para fazer média de tempo de execução de programas. 
 
-.exe disponível [aqui](https://github.com/agharium/MedidorDeTempoDeExecucao/releases) - **Requisito: .NET Framework 4.6**
+.exe disponível [aqui](https://github.com/agharium/MedidorDeTempoDeExecucao/releases/download/stable/MedidorTempoDeExecucao.exe) - **Requisito: .NET Framework 4.6**
 
 Versão atual: **1.1**
 
@@ -17,4 +17,5 @@ Este pequeno projeto foi criado para servir como auxílio em testes de desempenh
 - ~~Gerar gráfico da média de tempo de execução dos programas processados mediante escolha do usuário;~~
 - Permitir o usúario atrelar títulos a cada programa escolhido para testar;
 - Permitir o usuário definir um título para o teste;
-- Gerar JPG ou PDF do gráfico com os títulos e nomes escolhidos pelo usuário; 
+- Gerar JPG ou PDF do gráfico com os títulos e nomes escolhidos pelo usuário;
+- Colocar configuração da máquina na janela "Resultado";

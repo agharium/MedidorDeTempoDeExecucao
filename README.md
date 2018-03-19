@@ -1,12 +1,8 @@
 # Medidor de Tempo de Execução
 
-Código-fonte do utilitário desenvolvido em C# para fazer média de tempo de execução de programas. 
+Código-fonte do utilitário desenvolvido em C# para fazer média de tempo de execução de programas. Versão atual: **1.1**
 
-Versão atual: **1.1**
-
-**[Download do executável portátil](https://github.com/agharium/MedidorDeTempoDeExecucao/releases/download/stable/MedidorTempoDeExecucao.exe)**
-
-**REQUISITO: [.NET Framework 4.6](https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe)**
+**[Download do executável portátil](https://github.com/agharium/MedidorDeTempoDeExecucao/releases/download/stable/MedidorTempoDeExecucao.exe) - REQUISITO: [.NET Framework 4.6](https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe)**
 
 Testado apenas em sistemas Windows por enquanto. Provavelmente funcionará em MacOS e Linux com a biblioteca [Mono](http://www.mono-project.com/).
 
